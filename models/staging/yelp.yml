@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+    - name: yelp_source_data
+      database: postgres
+      schema: raw_datasets
+      tables:
+          - name: yelp_businesses
+            description: data describing restaurants extracted from yelp via yelp fusion api
+            columns:
+              - name: id
+                description: unique identifier of every business registered at yelp
+                data_tests:
+                    - unique
+                    - not_null
+          - name: yelp_business_reviews
+            description: reviews left by users after visiting restaurants in the yelp_businesses data. Some of the business might not have recorded reviews.

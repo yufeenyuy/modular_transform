@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+    - name: local_baker_source_data
+      database: postgres
+      schema: raw_datasets
+      tables:
+        - name: production
+          description: Daily production amounts for the different product types offered by local baker
+        - name: sales
+          description: Daily sales amounts alongside recorded losses and workers pocket allowance.
