@@ -8,7 +8,7 @@ select
     to_char(production_date, 'DD-Mon') production_dm,
     replace(bread_type,'_','') bread_type,
     split_part(bread_type,'_',2)::integer unitprice,
-    amount::numeric amount
+    nullif(amount::numeric, 'NaN') amount
 from
     (select 
         "production_date",
