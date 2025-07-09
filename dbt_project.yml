@@ -36,5 +36,3 @@ models:
       +materialized: view
     intermediate:
       +materialized: table
-    core:
-      +materialized: table
