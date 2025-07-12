@@ -1,7 +1,8 @@
 select 
     b.id business_id,
     b.name,
-    b.rating,
+    b.review_count::numeric,
+    b.rating::numeric,
     case 
         when b.price = '€' or b.price = '$' then 'inexpensive'
         when b.price = '€€' or b.price = '$$' then 'moderate' 
