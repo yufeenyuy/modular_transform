@@ -23,3 +23,7 @@ During the data transformation process of the Yelp and Local Bakery Datasets, a 
 On the image below, you can find the find the generated DAG from the transformations done with dbt-postgres.
 
 ![Directed Acyclic Graph](./img/dbt_lineage_graph.JPG "data transformation")
+
+In power BI addtional transformation was done to prepare the data for analysis. Specifically, the *sentiment score and key phrases* were calculated and extracted respectively from the review text. As a result, an extra table was created based on the tables that were imported from the database. Thus, the resulting data model that is used to analyse Yelp Business reviews is shown on the following image. The tables on the model can be seen on the lineage DAG displayed above.
+
+![Yelp Business Reviews](./img/yelp_data_model.JPG "Yelp Business Reviews Data Model")
