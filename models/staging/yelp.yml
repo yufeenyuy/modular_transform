@@ -15,3 +15,13 @@ sources:
                     - not_null
           - name: yelp_business_reviews
             description: reviews left by users after visiting restaurants in the yelp_businesses data. Some of the business might not have recorded reviews.
+            columns:
+              - name: id
+                description: unique identifier of every review
+                data_tests:
+                    - unique
+                    - not_null
+              - name: business_id
+                description: foreign key to yelp_business_reviews  
+                data_tests:
+                    - not_null

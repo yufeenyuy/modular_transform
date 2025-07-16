@@ -1,0 +1,75 @@
+version: 2
+
+models:
+    - name: pdtn_t1
+      description: a table containing the daily production data.
+      columns:
+          - name: amount
+            description: the amount of bread produced.
+            tests:
+                - not_null
+          - name: unitprice
+            description: the unit price of a bread type.
+            tests:
+                - not_null
+          - name: bread_type
+            description: the type of bread produced.
+            tests:
+                - not_null
+                - accepted_values:
+                    values:
+                      - banana50
+                      - square50
+                      - local50
+                      - banana100
+                      - local100
+                      - special100
+                      - special150
+                      - local200
+                      - special200 
+                      - local250
+                      - local300
+                      - special400
+                      - special500
+                      - special800
+    - name: datetable 
+      description: a table containing the dates from production and sales data.
+      columns:
+          - name: date
+            description: the date of a sales or production record.
+            tests:
+              - not_null
+              - unique
+    - name: feeding 
+      description: a table containing the amounts employees received for break from employer..
+      columns:
+          - name: production_date
+            description: the date of the feeding record.
+            tests:
+              - not_null
+              - unique
+          - name: feeding
+            description: the amount of food fed to the bakery animals.
+            tests:
+              - not_null
+    - name: items
+      description: a table containing the item the major item used in bread production.
+      columns:
+          - name: production_date
+            description: the date of the item record.
+            tests:
+              - not_null
+              - unique
+          - name: flour
+            description: name of the the major item.
+            tests:
+              - not_null
+    - name: weekly_product_pdtn_ts
+      description: a table containing the weekly production data.
+      columns:
+          - name: endofweek
+            description: the end of the week of production.
+            tests:
+              - not_null
+              - unique
+          
