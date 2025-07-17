@@ -2,3 +2,4 @@
 target/
 dbt_packages/
 logs/
+models/intermediate/products_weekly_ts.sql
