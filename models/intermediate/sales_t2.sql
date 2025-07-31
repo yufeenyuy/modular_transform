@@ -16,3 +16,5 @@ from
     sum(unsold_damaged) unsold_damaged
     from {{ref("sales_t1")}}
 group by 1) t
+
+

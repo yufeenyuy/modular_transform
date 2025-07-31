@@ -17,3 +17,5 @@ select
 from {{ref("pdtn_t1")}} p
 group by production_date
 order by production_date desc
+
+/* */

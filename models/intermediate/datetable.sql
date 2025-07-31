@@ -19,3 +19,5 @@ from
 union
 select distinct sales_date "date" from {{ref("sales_t1")}}) dt
 order by "date" asc
+
+/* */

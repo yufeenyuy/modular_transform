@@ -12,3 +12,5 @@ select
     end "price level",
     replace(replace(b.location, '''', '"'),'None','null')::json ->> 'city' as city
 from {{ref("yelp_businesses_stg")}} b
+
+/* */

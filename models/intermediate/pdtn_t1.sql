@@ -19,3 +19,5 @@ from
     from {{ref("stg_pdtn")}}) t1
 where production_date not in ('1900-01-28','7030-01-26')
 order by production_date asc
+
+

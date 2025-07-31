@@ -19,3 +19,5 @@ select
     (date_trunc('week', ti.time_created::date) + interval '6 days')::date date_endofwik,
     to_char(ti.time_created::timestamp, 'HH24') review_dayhour
 from {{ref("yelp_business_reviews_stg")}} ti
+
+/* */

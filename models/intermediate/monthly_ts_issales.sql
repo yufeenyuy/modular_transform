@@ -4,3 +4,5 @@ sum(is_sales)::numeric is_sales
 from {{ref("sales_t1")}}
 group by endofmonth
 order by endofmonth desc
+
+/*  */

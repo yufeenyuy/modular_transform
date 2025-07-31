@@ -5,3 +5,6 @@ select
 from {{ref("sales_t1")}}
 group by endofweek
 order by endofweek
+
+
+

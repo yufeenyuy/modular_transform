@@ -13,3 +13,4 @@ select
    nullif("Return"::numeric,'nan')::numeric unsold,
    nullif("Losses"::numeric,'nan')::numeric unsold_damaged         
 from {{ref("stg_sales")}}
+

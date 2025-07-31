@@ -16,3 +16,6 @@ where loaded_at = (select max(loaded_at) from {{source("local_baker_source_data"
 where production_date not in ('1900-01-28','7030-01-26')) b1 
 where rownum = 1
 order by production_date asc
+
+
+
